@@ -127,10 +127,12 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
         </div>
       </section>
       <section className="bg-[#000000] py-4 text-center">
-        <p className="text-white text-[12px]">
-          Copyright ©2023 PT. Layanan Kolaborasi Global | ant collaboration
-          allright reserved
-        </p>
+        <div className="container">
+          <p className="text-white text-[12px]">
+            Copyright ©2023 PT. Layanan Kolaborasi Global | ant collaboration
+            allright reserved
+          </p>
+        </div>
       </section>
     </>
   );

@@ -4,6 +4,7 @@ import { NavbarItem } from "@/types/components/core/navbar.type";
 import NavbarCustom from "../core/Navbar";
 import LogoAnt from "@/assets/images/antcollab-logo.png";
 import { Button } from "@nextui-org/react";
+import { Link } from "react-scroll";
 import Image from "next/image";
 import HeaderBG1 from "@/assets/images/Header/bg-header-1.png";
 import HeaderBG2 from "@/assets/images/Header/bg-header-2.png";
@@ -41,10 +42,26 @@ const HeaderCustom = () => {
 
               <div className="flex space-x-3">
                 <Button className="bg-[#F23700] rounded-xl py-[25px] px-[16px] text-white">
-                  As a Contributor
+                  <Link
+                    to="portfolio"
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    activeClass="active"
+                  >
+                    As a Contributor
+                  </Link>
                 </Button>
                 <Button className="bg-[#101010] rounded-xl py-[25px] px-[16px] text-white">
-                  As a Student
+                  <Link
+                    to="portfolio-1"
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    activeClass="active"
+                  >
+                    As a Student
+                  </Link>
                 </Button>
               </div>
             </div>

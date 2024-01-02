@@ -8,7 +8,7 @@ import FeaturesImgTwo from "@/assets/images/Features/features-2.png";
 const FeaturesTwo = () => {
   return (
     <>
-      <section className="bg-[#19041E] py-20 text-white">
+      <section id="portfolio-1" className="bg-[#19041E] py-20 text-white">
         <div className="container">
           <div className="flex flex-col justify-center text-center text-white items-center mb-14">
             <div className="w-[70%]">

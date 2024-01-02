@@ -22,6 +22,14 @@ body {
   line-height: 58px;
 }
 
+.header-navbar-btn {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 45px;
+  padding-right: 45px;
+  font-size: 16px;
+}
+
 .head-animation {
   margin-top: -40px;
 }
@@ -220,6 +228,14 @@ border-color: linear-gradient(90deg, #525252 0%, #FFFFFF 50%, #525252 100%);
     right: 178px;
     width: 105px;
     height: 194px;
+  }
+
+  .header-navbar-btn {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
   }
   .header-img-2 {
     width: 185px;

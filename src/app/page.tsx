@@ -3,15 +3,8 @@ import ComponentsAll from "@/components";
 import { NextUIProvider } from "@nextui-org/react";
 import Image from "next/image";
 import { useEffect } from "react";
-import LocomotiveScroll from "locomotive-scroll";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Home() {
-  useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll();
-  }, []);
-  AOS.init();
   return (
     <NextUIProvider>
       <ComponentsAll />

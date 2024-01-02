@@ -64,7 +64,7 @@ export default function NavbarCustom({ dataLink, logo }: NavbarInterface) {
             color="primary"
             href="#"
             variant="flat"
-            className="bg-[#F23700] py-[30px] px-[45px] text-white font-semibold text-[16px]"
+            className="bg-[#F23700] header-navbar-btn text-white font-semibold"
           >
             Join Us
           </Button>

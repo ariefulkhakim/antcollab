@@ -15,9 +15,10 @@ import VueIcon from "@/assets/icon/main/AntLandingPage/Vue.svg";
 import PythonIcon from "@/assets/icon/main/AntLandingPage/Python.svg";
 import NotionIcon from "@/assets/icon/main/AntLandingPage/Notion.svg";
 import Image from "next/image";
-import Magnetic from "./core/Animation/Magnetic";
-import LocomotiveScroll from "locomotive-scroll";
 import Footer from "./parts/Footer";
+import LocomotiveScroll from "locomotive-scroll";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ComponentsAll = () => {
   const [active, setActive] = useState("explore-1");
@@ -25,6 +26,22 @@ const ComponentsAll = () => {
     console.log(to);
     setActive(to);
   };
+
+  useEffect(() => {
+    // const locomotiveScroll = new LocomotiveScroll();
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
+    // Use dynamic import to ensure that the code runs only on the client side
+    import("locomotive-scroll").then((locomotiveModule) => {
+      const locomotiveScroll = new locomotiveModule.default({
+        // Your locomotive-scroll configuration options
+      });
+
+      // Initialize or use locomotive-scroll as needed
+    });
+  }, []);
   return (
     <>
       <HeaderCustom />
