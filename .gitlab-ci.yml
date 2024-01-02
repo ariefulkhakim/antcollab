@@ -1,0 +1,16 @@
+stages:
+  - package
+  - deploy
+docker-build-staging:
+  stage: package
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - echo "Running on branch 'develop'"
+    - docker build --pull -t "$CI_REGISTRY_IMAGE:develop" .
+    - docker push "$CI_REGISTRY_IMAGE:develop"
+  only:
+    - develop
