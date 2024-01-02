@@ -4,7 +4,7 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  // Link,
+  Link as LinkC,
   Button,
   NavbarMenuToggle,
   NavbarMenu,
@@ -60,9 +60,10 @@ export default function NavbarCustom({ dataLink, logo }: NavbarInterface) {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            as={Link}
+            as={LinkC}
             color="primary"
-            href="#"
+            href="https://discord.gg/kujvfdPuTf"
+            target="__blank"
             variant="flat"
             className="bg-[#F23700] header-navbar-btn text-white font-semibold"
           >

@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { Link as LinkC } from "@nextui-org/react";
 interface ExploreInterface {
   handleSetActive?: (e: any) => void;
   active?: string;
@@ -104,9 +105,11 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
                 Community
               </p>
               <ul>
-                <li className="mb-3 text-[16px] font-normal text-[#495057]">
-                  Discord
-                </li>
+                <LinkC href="https://discord.gg/kujvfdPuTf" target="__blank">
+                  <li className="mb-3 text-[16px] font-normal text-[#495057]">
+                    Discord
+                  </li>
+                </LinkC>
               </ul>
             </div>
 
@@ -116,10 +119,23 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
               </p>
               <ul>
                 <li className="mb-3 text-[16px] font-normal text-[#495057]">
-                  Tiktok
+                  <LinkC
+                    href="https://www.tiktok.com/@antcollaboration"
+                    target="__blank"
+                    className="text-[#495057]"
+                  >
+                    Tiktok
+                  </LinkC>
                 </li>
+
                 <li className="mb-3 text-[16px] font-normal text-[#495057]">
-                  Instagram
+                  <LinkC
+                    href="https://www.instagram.com/ant.collaboration"
+                    target="__blank"
+                    className="text-[#495057]"
+                  >
+                    Instagram
+                  </LinkC>
                 </li>
               </ul>
             </div>
@@ -129,7 +145,7 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
       <section className="bg-[#000000] py-4 text-center">
         <div className="container">
           <p className="text-white text-[12px]">
-            Copyright ©2023 PT. Layanan Kolaborasi Global | ant collaboration
+            Copyright ©2024 PT. Layanan Kolaborasi Global | ant collaboration
             allright reserved
           </p>
         </div>

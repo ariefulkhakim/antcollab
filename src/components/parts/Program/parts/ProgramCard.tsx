@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Avatar, AvatarGroup, Button } from "@nextui-org/react";
+import { Avatar, AvatarGroup, Button, Link } from "@nextui-org/react";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 interface ProgramCardInterface {
   image: string | StaticImport;
@@ -56,7 +56,12 @@ const ProgramCard = ({ image, title }: ProgramCardInterface) => {
               src="https://i.pravatar.cc/150?u=a04258114e29026708c"
             />
           </AvatarGroup>
-          <Button className="bg-white rounded-2xl text-[14px] mt-4">
+          <Button
+            as={Link}
+            href="https://discord.gg/kujvfdPuTf"
+            target="__blank"
+            className="bg-white rounded-2xl text-[14px] mt-4"
+          >
             Lets Join
           </Button>
         </div>
