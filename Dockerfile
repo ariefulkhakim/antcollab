@@ -39,7 +39,7 @@ COPY --from=builder /app/public ./public
 
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY entrypoint.sh .
+COPY entrypoint.sh .  # Specify the target directory for entrypoint.sh
 
 # Execute script
 RUN apk add --no-cache --upgrade bash
@@ -51,6 +51,5 @@ USER nextjs
 EXPOSE 3000
 
 ENV PORT 3000
-
 
 CMD ["node", "server.js"]
