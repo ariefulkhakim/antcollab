@@ -1,58 +1,23 @@
-FROM node:18-alpine AS base
+# Use the official Node.js image as the base  
+FROM node:14  
 
-FROM base AS deps
-WORKDIR /app
+# Set the working directory inside the container  
+WORKDIR /app  
 
-COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
-RUN \
-if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
-elif [ -f package-lock.json ]; then npm ci; \
-elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
-else echo "Lockfile not found." && exit 1; \
-fi
+# Copy package.json and package-lock.json to the container  
+COPY package*.json ./  
 
-# Rebuild the source code only when needed
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+# Install dependencies  
+RUN npm ci  
 
-ENV NEXT_TELEMETRY_DISABLED 1
+# Copy the app source code to the container  
+COPY . .  
 
-RUN \
-    NEXT_PUBLIC_SICS_HOME=APP_NEXT_PUBLIC_SICS_HOME \
-    NEXT_PUBLIC_API_URL=APP_NEXT_PUBLIC_API_URL \
-    NEXT_PUBLIC_API_EXISTING_URL=APP_NEXT_PUBLIC_API_EXISTING_URL \
-    NEXT_PUBLIC_PRODUCT_NAME=APP_NEXT_PUBLIC_PRODUCT_NAME \
-    npm run build
+# Build the Next.js app  
+RUN npm run build  
 
-FROM base AS runner
-WORKDIR /app
+# Expose the port the app will run on  
+EXPOSE 3000  
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-COPY --from=builder /app/public ./public
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY entrypoint.sh .
-
-
-
-# Execute script
-RUN apk add --no-cache --upgrade bash
-RUN ["chmod", "+x", "./entrypoint.sh"]
-ENTRYPOINT ["./entrypoint.sh"]
-
-
-USER nextjs
-
-EXPOSE 3000
-
-ENV PORT 3000
-
-CMD ["node", "server.js"]
+# Start the app  
+CMD ["npm", "start"]  
