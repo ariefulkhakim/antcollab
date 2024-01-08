@@ -1,4 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-extraneous-dependencies */
 
-module.exports = nextConfig
+module.exports = {
+    output: 'standalone',
+    eslint: {
+        dirs: ['.'],
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+    publicRuntimeConfig: {},
+    serverRuntimeConfig: {},
+    reactStrictMode: true,
+};
