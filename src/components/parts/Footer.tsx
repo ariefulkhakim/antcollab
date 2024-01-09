@@ -16,26 +16,30 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
               </p>
               <ul>
                 <li className="mb-3 text-[16px] font-normal text-[#495057] cursor-pointer">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to={`program`}
                     smooth={true}
                     offset={50}
                     duration={500}
                     activeClass="active"
+                    className="text-[#495057]"
                   >
                     Antcode
-                  </Link>
+                  </LinkC>
                 </li>
                 <li className="mb-3 text-[16px] font-normal text-[#495057] cursor-pointer">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to={`program-1`}
                     smooth={true}
                     offset={50}
                     duration={500}
                     activeClass="active"
+                    className="text-[#495057]"
                   >
                     Antcreative
-                  </Link>
+                  </LinkC>
                 </li>
               </ul>
             </div>
@@ -46,7 +50,8 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
               </p>
               <ul>
                 <li className="mb-3 text-[16px] font-normal text-[#495057] cursor-pointer">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to={`explore-1`}
                     spy={true}
                     smooth={true}
@@ -54,12 +59,14 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
                     duration={500}
                     activeClass="active"
                     onSetActive={handleSetActive}
+                    className="text-[#495057]"
                   >
                     Education & Tutorial
-                  </Link>
+                  </LinkC>
                 </li>
                 <li className="mb-3 text-[16px] font-normal text-[#495057] cursor-pointer">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to={`explore-2`}
                     spy={true}
                     smooth={true}
@@ -67,12 +74,14 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
                     duration={500}
                     activeClass="active"
                     onSetActive={handleSetActive}
+                    className="text-[#495057]"
                   >
                     Forum & Networking Space
-                  </Link>
+                  </LinkC>
                 </li>
                 <li className="mb-3 text-[16px] font-normal text-[#495057] cursor-pointer">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to={`explore-3`}
                     spy={true}
                     smooth={true}
@@ -80,12 +89,14 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
                     duration={500}
                     activeClass="active"
                     onSetActive={handleSetActive}
+                    className="text-[#495057]"
                   >
                     Collaborative Project
-                  </Link>
+                  </LinkC>
                 </li>
                 <li className="mb-3 text-[16px] font-normal text-[#495057] cursor-pointer">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to={`explore-4`}
                     spy={true}
                     smooth={true}
@@ -93,9 +104,10 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
                     duration={500}
                     activeClass="active"
                     onSetActive={handleSetActive}
+                    className="text-[#495057]"
                   >
                     Mentorship
-                  </Link>
+                  </LinkC>
                 </li>
               </ul>
             </div>
@@ -105,11 +117,15 @@ const Footer = ({ handleSetActive }: ExploreInterface) => {
                 Community
               </p>
               <ul>
-                <LinkC href="https://discord.gg/kujvfdPuTf" target="__blank">
-                  <li className="mb-3 text-[16px] font-normal text-[#495057]">
+                <li className="mb-3 text-[16px] font-normal text-[#495057]">
+                  <LinkC
+                    href="https://discord.gg/kujvfdPuTf"
+                    target="__blank"
+                    className="text-[#495057]"
+                  >
                     Discord
-                  </li>
-                </LinkC>
+                  </LinkC>
+                </li>
               </ul>
             </div>
 

@@ -10,7 +10,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import { Link } from "react-scroll";
+import { Link as LinkS } from "react-scroll";
 import { NavbarInterface } from "@/types/components/core/navbar.type";
 import Image from "next/image";
 
@@ -30,7 +30,8 @@ export default function NavbarCustom({ dataLink, logo }: NavbarInterface) {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <Link
+          <LinkC
+            as={LinkS}
             to={`home`}
             smooth={true}
             offset={50}
@@ -38,13 +39,14 @@ export default function NavbarCustom({ dataLink, logo }: NavbarInterface) {
             activeClass="active"
           >
             <Image src={logo} alt="Ant Logo" width={175} height={70} />
-          </Link>
+          </LinkC>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-14" justify="center">
         {dataLink?.map((res, key) => (
           <NavbarItem key={key}>
-            <Link
+            <LinkC
+              as={LinkS}
               className="text-[#333333] font-semibold text-[16px] cursor-pointer"
               to={`${res.link}`}
               smooth={true}
@@ -53,7 +55,7 @@ export default function NavbarCustom({ dataLink, logo }: NavbarInterface) {
               activeClass="active"
             >
               {res.name}
-            </Link>
+            </LinkC>
           </NavbarItem>
         ))}
       </NavbarContent>
@@ -74,7 +76,8 @@ export default function NavbarCustom({ dataLink, logo }: NavbarInterface) {
       <NavbarMenu>
         {dataLink?.map((item, index) => (
           <NavbarMenuItem key={`${index}`}>
-            <Link
+            <LinkC
+              as={LinkS}
               className="text-[#333333] font-semibold text-[16px] cursor-pointer"
               to={`${item.link}`}
               smooth={true}
@@ -83,7 +86,7 @@ export default function NavbarCustom({ dataLink, logo }: NavbarInterface) {
               activeClass="active"
             >
               {item.name}
-            </Link>
+            </LinkC>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

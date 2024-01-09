@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ExploreImg1 from "@/assets/images/Explore/explore-1.png";
-import { Divider } from "@nextui-org/react";
+import { Divider, Link as LinkC } from "@nextui-org/react";
 import { Link } from "react-scroll";
 import { useState } from "react";
 interface ExploreInterface {
@@ -28,7 +28,8 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                         : "border-l-transparent"
                     } py-3 pl-3 cursor-pointer`}
                   >
-                    <Link
+                    <LinkC
+                      as={Link}
                       to={`explore-1`}
                       spy={true}
                       smooth={true}
@@ -36,9 +37,10 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                       duration={500}
                       activeClass="active"
                       onSetActive={handleSetActive}
+                      className="text-[#495057]"
                     >
                       Education & Tutorial
-                    </Link>
+                    </LinkC>
                   </li>
                   <li
                     className={`border border-y-0 border-r-0 border-l-2 ${
@@ -47,7 +49,8 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                         : "border-l-transparent"
                     } py-3 pl-3 cursor-pointer`}
                   >
-                    <Link
+                    <LinkC
+                      as={Link}
                       to={`explore-2`}
                       spy={true}
                       smooth={true}
@@ -55,9 +58,10 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                       duration={500}
                       activeClass="active"
                       onSetActive={handleSetActive}
+                      className="text-[#495057]"
                     >
                       Forum & Networking Space
-                    </Link>
+                    </LinkC>
                   </li>
                   <li
                     className={`border border-y-0 border-r-0 border-l-2 ${
@@ -66,7 +70,8 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                         : "border-l-transparent"
                     } py-3 pl-3 cursor-pointer`}
                   >
-                    <Link
+                    <LinkC
+                      as={Link}
                       to={`explore-3`}
                       spy={true}
                       smooth={true}
@@ -74,9 +79,10 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                       duration={500}
                       activeClass="active"
                       onSetActive={handleSetActive}
+                      className="text-[#495057]"
                     >
                       Colaborative Project
-                    </Link>
+                    </LinkC>
                   </li>
                   <li
                     className={`border border-y-0 border-r-0 border-l-2 ${
@@ -85,7 +91,8 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                         : "border-l-transparent"
                     } py-3 pl-3 cursor-pointer`}
                   >
-                    <Link
+                    <LinkC
+                      as={Link}
                       to={`explore-4`}
                       spy={true}
                       smooth={true}
@@ -93,9 +100,10 @@ const Explore = ({ handleSetActive, active }: ExploreInterface) => {
                       duration={500}
                       activeClass="active"
                       onSetActive={handleSetActive}
+                      className="text-[#495057]"
                     >
                       Mentorship
-                    </Link>
+                    </LinkC>
                   </li>
                 </ul>
               </div>

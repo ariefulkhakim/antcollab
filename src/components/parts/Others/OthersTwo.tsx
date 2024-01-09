@@ -14,15 +14,15 @@ const OthersTwo = () => {
             <div>
               <div className="grid md:grid-cols-2 gap-10 sm:grid-cols-1">
                 <div>
-                  <p className="border border-y-0 border-r-0 border-l-2 border-l-[#F23700] p-3 mb-3 text-[#495057] text-[18px] font-bold overflow-hidden">
-                    <div
-                      data-aos="fade-right"
-                      data-aos-delay="5"
-                      data-aos-duration="600"
-                    >
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay="5"
+                    data-aos-duration="600"
+                  >
+                    <p className="border border-y-0 border-r-0 border-l-2 border-l-[#F23700] p-3 mb-3 text-[#495057] text-[18px] font-bold overflow-hidden">
                       Mutual Cooperation
-                    </div>
-                  </p>
+                    </p>
+                  </div>
                   <div
                     data-aos="fade-up"
                     data-aos-delay="5"
@@ -35,15 +35,15 @@ const OthersTwo = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="border border-y-0 border-r-0 border-l-2 border-l-[#F23700] p-3 mb-3 text-[#495057] text-[18px] font-bold overflow-hidden">
-                    <div
-                      data-aos="fade-right"
-                      data-aos-delay="9"
-                      data-aos-duration="900"
-                    >
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay="9"
+                    data-aos-duration="900"
+                  >
+                    <p className="border border-y-0 border-r-0 border-l-2 border-l-[#F23700] p-3 mb-3 text-[#495057] text-[18px] font-bold overflow-hidden">
                       Embrace Curiosity
-                    </div>
-                  </p>
+                    </p>
+                  </div>
                   <div
                     data-aos="fade-up"
                     data-aos-delay="9"
@@ -56,15 +56,15 @@ const OthersTwo = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="border border-y-0 border-r-0 border-l-2 border-l-[#F23700] p-3 mb-3 text-[#495057] text-[18px] font-bold overflow-hidden">
-                    <div
-                      data-aos="fade-right"
-                      data-aos-delay="13"
-                      data-aos-duration="1300"
-                    >
+                  <div
+                    data-aos="fade-right"
+                    data-aos-delay="13"
+                    data-aos-duration="1300"
+                  >
+                    <p className="border border-y-0 border-r-0 border-l-2 border-l-[#F23700] p-3 mb-3 text-[#495057] text-[18px] font-bold overflow-hidden">
                       Sharing is the way of life
-                    </div>
-                  </p>
+                    </p>
+                  </div>
                   <div
                     data-aos="fade-up"
                     data-aos-delay="13"

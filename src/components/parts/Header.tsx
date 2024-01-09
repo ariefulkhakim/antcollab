@@ -3,7 +3,7 @@
 import { NavbarItem } from "@/types/components/core/navbar.type";
 import NavbarCustom from "../core/Navbar";
 import LogoAnt from "@/assets/images/antcollab-logo.png";
-import { Button } from "@nextui-org/react";
+import { Button, Link as LinkC } from "@nextui-org/react";
 import { Link } from "react-scroll";
 import Image from "next/image";
 import HeaderBG1 from "@/assets/images/Header/bg-header-1.png";
@@ -42,26 +42,30 @@ const HeaderCustom = () => {
 
               <div className="flex space-x-3">
                 <Button className="bg-[#F23700] rounded-xl py-[25px] px-[16px] text-white">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to="portfolio"
                     smooth={true}
                     offset={50}
                     duration={500}
                     activeClass="active"
+                    className="text-white"
                   >
                     As a Contributor
-                  </Link>
+                  </LinkC>
                 </Button>
                 <Button className="bg-[#101010] rounded-xl py-[25px] px-[16px] text-white">
-                  <Link
+                  <LinkC
+                    as={Link}
                     to="portfolio-1"
                     smooth={true}
                     offset={50}
                     duration={500}
                     activeClass="active"
+                    className="text-white"
                   >
                     As a Student
-                  </Link>
+                  </LinkC>
                 </Button>
               </div>
             </div>
